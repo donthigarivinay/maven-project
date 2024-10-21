@@ -1,5 +1,5 @@
-# Use the official Maven image for building the application
-FROM maven:3.8.4-openjdk-11 AS build
+# Use the official Maven image for building the application with JDK 17
+FROM maven:3.8.4-openjdk-17 AS build
 
 # Set the working directory
 WORKDIR /usr/src/app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Use OpenJDK to run the application
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Set the working directory
 WORKDIR /usr/src/app
