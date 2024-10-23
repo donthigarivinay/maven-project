@@ -5,6 +5,6 @@ package com.example.hello_print;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello Vinay!");
     }
 }
